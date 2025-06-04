@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Gardenverse</title>
+    <meta name="description" content="A page all about gardening and how to's.">
+    <link rel="stylesheet" href="style.css">
+    <script defer src="main.js"></script>
+    <meta property="og:title" content="April Backus - Web Developer">
+    <meta property="og:description" content="Gardenverse">
+    <meta property="og:image" content="https://raw.githubusercontent.com/BackusA920/8-Bit-Garden-Zone-Catalog/refs/heads/main/assets/Screen.png">
+    <meta property="og:url" content="https://backusa920.github.io/8-Bit-Garden-Zone-Catalog/">
+    <meta property="og:type" content="website">
+    </head>
+
+    <body>
+        <header class="nav-header">
+        <div class="nav-container">
+            <div class="logo">Gardenverse</div>
+
+            <div class="nav-right">
+            <nav class="main-nav">
+                <ul>
+                <li><a href="#" data-page="index" class="nav-link">Home</a></li>
+                <li><a href="#" data-page="events" class="nav-link">Events</a></li>
+                <li><a href="#" data-page="contact" class="nav-link">Contact</a></li>
+                </ul>
+            </nav>
+            <button class="menu-icon" id="menuToggle">&#9776;</button>
+            </div>
+        </div>
+
+        <ul class="dropdown-menu" id="dropdownMenu">
+            <li><a href="#" data-page="plant-guide" class="nav-link">Plant Guide</a></li>
+            <li><a href="#" data-page="soil-and-sunlight" class="nav-link">Soil & Sunlight</a></li>
+            <li><a href="#" data-page="companion-planting" class="nav-link">Companion Planting</a></li>
+            <li><a href="#" data-page="crossbreeding" class="nav-link">Crossbreeding</a></li>
+            <li><a href="#" data-page="invasive" class="nav-link">Invasive Species</a></li>
+            <li><a href="#" data-page="Help-Videos" class="nav-link">Help Videos</a></li>
+        </ul>
+        </header>
+       
+
+    <main>
+        <main id="dynamic-content">
+        <section id="index" class="page-section">
+        <section id="dynamic-content" style="display:none;"></section>
+        <section class="welcome-section">
+        <div class="welcome-photo">
+          <img src="assets/gardening.webp" alt="Welcome Garden Photo" />
+        </div>
+
+        <div class="welcome">
+          <h2>Welcome Gardeners!</h2>
+          <p>Welcome, Gardeners of All Kinds! New to gardening? Need a refresher? This site is your go-to guide for anyone interested in growing, whether you're just starting out, returning to the hobby, or a lifelong gardener. From soil testing and sunlight needs to pollinator-friendly planting and seasonal tips, we’ve gathered the essentials to help your garden thrive. With easy-to-follow advice, science-backed practices, and a passion for green spaces, this guide is designed for gardeners of all ages and experience levels. There’s something here for everyone, dig in and grow with us!</p>
+          <p>Be sure to check out the Zone Checker, and explore our other pages for more valuable tips on soil health, pollinators, and everything your garden needs to flourish.</p>
+        </div>
+      </section>
+
+    
+
+    <section class="zone-checker">
+      <div class="zone-text">
+        <h3>Know Your Zones</h3>
+        <p>Click below to visit the official USDA Hardiness Zone map and discover your planting zone.</p>
+      </div>
+
+      <div class="zone-image-link">
+        <a href="https://planthardiness.ars.usda.gov/" target="_blank">
+        <img src="/assets/Zone.png" alt="US Hardiness Zone Map"/>
+        </a>
+        <br>
+        <a href="https://planthardiness.ars.usda.gov/" target="_blank" class="cta-button">Visit the Zone Finder</a>
+      </div>
+    </section>
+
+    <section class="highlights-grid">
+      <div class="highlight">Discover the best soil and sunlight for every plant.</div>
+      <div class="highlight">Explore native, seasonal, and zone-appropriate flowers.</div>
+      <div class="highlight">Learn about crossbreeding, companion planting, and biodiversity.</div>
+      <div class="highlight">Find invasive species to avoid and how to spot them.</div>
+    </section>
+
+
+    <section class="feature-images">
+      <img src="assets/ecology.webp" width="500" alt="Ecology Garden Image"/>
+      <img src="assets/gardening.webp" width="500" alt="Community Garden Image"/>
+      <img src="assets/Soil.webp" width="500" alt="Soil Garden Image 1"/>
+      <img src="assets/strawberrie.webp" width="500" alt=" Garden Image"/>
+    </section>
+
+    <section class="community-message">
+      <h2>About Our Community Garden</h2>
+      <p>Our community garden is a shared space where people from all walks of life come together to grow, learn, and support each other. Volunteers of all ages contribute to planting, maintaining, and harvesting — and the fresh produce we grow is shared among everyone who helps. It’s gardening with purpose and community at heart.</p>
+    </section>
+
+    <section class="call-to-action">
+      <h2>Ready to Grow?</h2>
+      <p>Whether you're sowing your first seed or planning your next pollinator bed, there's something here for you. Dive deeper into our plant guide, explore soil science, or check out upcoming events near you.</p>
+      <a href="plant-guide.html" class="cta-button">Explore the Plant Guide</a>
+    </section>
+  </section>
+
+  <!-- events page -->
+
+  <section id="events" class="page-section" style="display: none;">
+    <main class="events-page">
+        <section class="events-intro">
+            <h1>Hey there, looking to get involved with your community?</h1>
+            <h2>Look no further.</h2>
+            <p>Getting involved is good for the community, good for your mental health, and brings us all together. Here are some of our upcoming events.</p>
+        </section>
+
+        <section class="events-grid">
+            
+            <div class="event-card">
+                <img src="https://images.pexels.com/photos/1301856/pexels-photo-1301856.jpeg" alt="Seed Starting Workshop">
+                <h3>Seed Starting Workshop</h3>
+                <p>Learn the basics of starting seeds indoors to get a jump on the growing season. Perfect for beginners!</p>
+            </div>
+            
+            <div class="event-card">
+                <img src="https://images.pexels.com/photos/1933470/pexels-photo-1933470.jpeg" alt="Kids' Garden Day">
+                <h3>Kids' Garden Day</h3>
+                <p>A fun-filled day for children to learn about plants, soil, and the joy of gardening through interactive activities.</p>
+            </div>
+            
+            <div class="event-card">
+                <img src="https://images.pexels.com/photos/296230/pexels-photo-296230.jpeg" alt="Composting 101">
+                <h3>Composting 101</h3>
+                <p>Discover how to turn kitchen scraps into nutrient-rich compost to enrich your garden soil.</p>
+            </div>
+            
+            <div class="event-card">
+                <img src="https://images.pexels.com/photos/1301857/pexels-photo-1301857.jpeg" alt="Herb Garden Planting">
+                <h3>Herb Garden Planting</h3>
+                <p>Join us in planting a variety of herbs and learn how to care for them throughout the season.</p>
+            </div>
+           
+            <div class="event-card">
+                 <img src="https://images.pexels.com/photos/1108099/pexels-photo-1108099.jpeg" alt="Garden Art for Kids">
+                <h3>Garden Art for Kids</h3>
+                <p>Encourage creativity as children create garden-themed art projects to take home and display.</p>
+            </div>
+
+            <div class="event-card">
+                <img src="https://images.pexels.com/photos/573285/pexels-photo-573285.jpeg" alt="Harvest Festival">
+                <h3>Harvest Festival</h3>
+                <p>Celebrate the season's bounty with music, food, and community activities for all ages.</p>
+            </div>
+        </section>
+
+        <section class="events-followup">
+            <h2>It's okay if you missed an event</h2>
+            <p>If you see an event that you missed and you'd like to attend, let us know. We sometimes bring back events with high demand in the future.</p>
+        </section>
+
+        <section class="missed-events">
+            <h2>Missed an Event?</h2>
+            <p>If you see an event you missed and would love another chance to attend, let us know! We sometimes bring back popular events by request.</p>
+
+    <div class="events-grid">
+        <div class="event-card">
+            <img src="https://images.pexels.com/photos/1301852/pexels-photo-1301852.jpeg" alt="Garden Planning Workshop">
+            <h3>Garden Planning Workshop</h3>
+            <p>Learn how to design garden beds, rotate crops, and plan out a successful season from start to finish.</p>
+        </div>
+
+        <div class="event-card">
+            <img src="https://images.pexels.com/photos/5231125/pexels-photo-5231125.jpeg" alt="Kids Pollinator Hunt">
+            <h3>Kids' Pollinator Hunt</h3>
+            <p>A fun, guided exploration for kids to spot bees, butterflies, and other garden helpers!</p>
+        </div>
+
+        <div class="event-card">
+            <img src="https://images.pexels.com/photos/4406593/pexels-photo-4406593.jpeg" alt="Rainwater Collection Demo">
+            <h3>Rainwater Collection Demo</h3>
+            <p>Discover sustainable ways to collect rainwater and reduce your garden’s environmental footprint.</p>
+        </div>
+
+        <div class="event-card">
+            <img src="https://images.pexels.com/photos/2376351/pexels-photo-2376351.jpeg" alt="Vertical Gardening Workshop">
+            <h3>Vertical Gardening</h3>
+            <p>Learn to grow more in less space with trellises, towers, and creative vertical solutions.</p>
+        </div>
+
+        <div class="event-card">
+            <img src="https://images.pexels.com/photos/296230/pexels-photo-296230.jpeg" alt="Garden Yoga & Meditation">
+            <h3>Garden Yoga & Meditation</h3>
+            <p>Join us for a relaxing morning of yoga among the plants — great for your body and mind.</p>
+        </div>
+
+        <div class="event-card">
+            <img src="https://images.pexels.com/photos/7219017/pexels-photo-7219017.jpeg" alt="Community Plant Swap">
+            <h3>Community Plant Swap</h3>
+            <p>Bring your extra seedlings and swap them with others! A great way to diversify your garden and connect with neighbors.</p>
+        </div>
+    </div>
+    </section>
+  </section>
+
+  <!-- ContactPage --> 
+  <section id="contact" class="page-section" style="display: none;">
+    <section class="contact-hours-wrapper">
+        <div class="contact-column">
+            <h2>Your Voice Matters</h2>
+            <p>We would love to hear from you!</p>
+
+            <form class="contact-form" action="#" method="POST">
+            <input type="text" name="name" placeholder="Your full name" required>
+            <input type="email" name="email" placeholder="you@example.com" required>
+            <input type="tel" name="phone" placeholder="Phone number (optional)">
+            <textarea name="message" rows="6" placeholder="Your message here..." required></textarea>
+            <button type="submit" class="cta-button">Send Message</button>
+            </form>
+        </div>
+
+        
+        <div class="hours-column">
+            <h2>Hours of Operation</h2>
+            <p>Our garden is open 24/7. Listed hours reflect when staff is available to assist.</p>
+            <table class="hours-table">
+            <thead>
+                <tr><th>Day</th><th>Hours</th></tr>
+            </thead>
+            <tbody>
+                <tr><td>Monday</td><td>Closed</td></tr>
+                <tr><td>Tuesday</td><td>8:00 AM – 1:00 PM</td></tr>
+                <tr><td>Wednesday</td><td>8:00 AM – 1:00 PM</td></tr>
+                <tr><td>Thursday</td><td>8:00 AM – 1:00 PM</td></tr>
+                <tr><td>Friday</td><td>8:00 AM – 1:00 PM</td></tr>
+                <tr><td>Saturday</td><td>8:00 AM – 5:00 PM</td></tr>
+                <tr><td>Sunday</td><td>8:00 AM – 1:00 PM</td></tr>
+            </tbody>
+            </table>
+        </div>
+    </section>
+
+    <section class="map-section">
+        <h2>Visit Our Garden</h2>
+        <div class="map-container">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2904.324157679745!2d-87.68537408453136!3d44.09477647910945!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x88038e2d0cd11fd9%3A0x49d1b3c92a3b7ce9!2s2344%20S%2014th%20St%2C%20Manitowoc%2C%20WI%2054220!5e0!3m2!1sen!2sus!4v1717427200000!5m2!1sen!2sus"
+            width="100%" height="300" style="border:0; border-radius:12px;" allowfullscreen="" loading="lazy">
+          </iframe>
+        </div>
+    </section>
+
+    <section class="contact-info">
+        <h2>Contact Us</h2>
+        <div class="contact-buttons">
+            <a href="mailto:info@gardenverse.org" class="contact-btn">Email Us</a>
+            <a href="tel:+19205551234" class="contact-btn">Call Us</a>
+            <a href="https://maps.google.com/?q=2344+S+14th+St,+Manitowoc,+WI+54220" target="_blank" class="contact-btn">Get Directions</a>
+        </div>
+    </section>
+  </section>
+
+  <!-- Plant Guide --> 
+  <section id="plant-guide" class="page-section" style="display: none;">
+   <section class="welcome-section">
+      <h1>Welcome to Our Plant Guide</h1>
+      <h2>Your One-Stop Shop for Planting Success</h2>
+      <p>Welcome to the ultimate guide for growing your favorite plants successfully.</p>
+    </section>
+
+    <section class="plant-guide-grid">
+      <article class="guide-section">
+        <h3>🌱Gardening Basics</h3>
+        <ul>
+          <li><strong>Sunlight:</strong> Most plants require 6–8 hours of direct sunlight daily.</li>
+          <li><strong>Watering:</strong> Water in the morning to reduce evaporation and prevent disease.</li>
+          <li><strong>Spacing:</strong> Proper spacing ensures adequate airflow and reduces disease risk.</li>
+          <li><strong>Mulching:</strong> Helps retain moisture and suppress weeds.</li>
+        </ul>
+      </article>
+
+      <article class="guide-section">
+        <h3>🛠️ Essential Tools</h3>
+        <ul>
+          <li>Hand trowel</li>
+          <li>Pruning shears</li>
+          <li>Watering can or hose</li>
+          <li>Gardening gloves</li>
+          <li>Kneeling Pad</li>
+          <li>Garden Scissors</li>
+          <li>Rake</li>
+          <li>Compost Bin</li>
+          <li>Garden Cart</li>
+          <li>Twine</li>
+        </ul>
+      </article>
+
+      <article class="guide-section">
+        <h3>🌾 Choosing the Right Soil</h3>
+        <ul>
+          <li><strong>Loamy soil:</strong> Ideal for most plants due to its balanced texture and fertility.</li>
+          <li><strong>Soil testing:</strong> Determine pH and nutrient levels for optimal plant health.</li>
+          <li><strong>Compost:</strong> Enriches soil with organic matter and nutrients.</li>
+          <li><strong>Drainage:</strong> Ensure soil drains well to prevent root rot.</li>
+        </ul>
+      </article>
+
+      <article class="guide-section">
+        <h3>🌍 Understanding Your Planting Zone</h3>
+        <ul>
+            <li><strong>What it is:</strong> Your USDA Hardiness Zone determines what plants can survive your local winters.</li>
+            <li><strong>Why it matters:</strong> Choosing plants suited to your zone helps avoid frost damage and poor growth.</li>
+            <li><strong>How to find yours:</strong> Use the to search by ZIP code.</li>
+            <li><strong>Pro tip:</strong> Don't rely on just zone number—consider humidity, sunlight, and microclimates too.</li>
+        </ul>
+        </article>
+
+        <article class="guide-section">
+        <h3>🌀 Annuals vs Perennials</h3>
+        <ul>
+            <li><strong>Annuals:</strong> Live for one season. Bloom fast and often (e.g., zinnias, tomatoes, marigolds).</li>
+            <li><strong>Perennials:</strong> Come back year after year. Often bloom later but last longer (e.g., lavender, hostas).</li>
+            <li><strong>Biennials:</strong> Take two years to mature and bloom (e.g., parsley, foxglove).</li>
+            <li><strong>Tip:</strong> Mix annuals for color and perennials for structure to get the best of both worlds.</li>
+        </ul>
+        </article>
+
+      <article class="guide-section">
+        <h3>🛒 Where to Buy Plants</h3>
+        <ul>
+          <li><a href="https://www.livelyroot.com/" target="_blank">Lively Root</a>: Offers a wide variety of indoor and outdoor plants delivered to your doorstep.</li>
+          <li><a href="https://houseplantshop.com/" target="_blank">House Plant Shop</a>: A one-stop shop for everything houseplants, including rare and exotic varieties.</li>
+        </ul>
+        <div class="cta-buttons">
+          <a href="https://www.livelyroot.com/" target="_blank" class="cta-button">Shop Lively Root</a>
+          <a href="https://houseplantshop.com/" target="_blank" class="cta-button">Visit House Plant Shop</a>
+        </div>
+      </article>
+    </section>
+
+    <section class="plant-image">
+      <img src="https://images.pexels.com/photos/1213049/pexels-photo-1213049.jpeg" width="" alt="Healthy green plants" />
+    </section>
+</section>
+
+
+<!-- Soil and Sunlight --> 
+<section id="soil-and-sunlight" class="page-section" style="display: none;">
+  <h1>Soil & Sunlight</h1>
+  <p>Learn how soil types and sunlight exposure affect plant growth and health.</p>
+</section>
+
+<!-- Companion Planting --> 
+<section id="companion-planting" class="page-section" style="display: none;">
+  <h1>Companion Planting</h1>
+  <p>Discover which plants grow better together and how to maximize your garden’s harmony.</p>
+</section>
+
+<!-- Crossbreeding --> 
+<section id="crossbreeding" class="page-section" style="display: none;">
+  <h1>Crossbreeding</h1>
+  <p>Explore fun ways to experiment with plant genetics in your own backyard.</p>
+</section>
+ 
+<!-- Invasive --> 
+<section id="invasive" class="page-section" style="display: none;">
+  <h1>Invasive Species</h1>
+  <p>Identify and manage invasive species that could threaten your garden ecosystem.</p>
+</section>
+
+<!-- Help Videos --> 
+<section id="Help-Videos" class="page-section" style="display: none;">
+  <h1>Help Videos</h1>
+  <p>Watch our helpful videos for visual guides on planting, maintenance, and garden hacks.</p>
+</section>
+
+
+</main>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ <footer>
+  <p>&copy; 2025 April Backus · Web Developer · All Things Gardening</p>
+  <a href="#top">Back to top</a>
+</footer>
+
+  </script>
+<section id="dynamic-content" style="display:none;"></section>
+</main>
+</body>
+</html>
+
+

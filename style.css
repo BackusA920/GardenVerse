@@ -1,0 +1,739 @@
+
+:root {
+  --green: #6f9e75;
+  --light-green: #dcead7;
+  --tan: #f3f0e8;
+  --dark-text: #2b2b2b;
+  --white: #ffffff;
+  --link: #4b7354;
+}
+
+html, body {
+  height: 100%;
+  margin: 0;
+}
+
+.page-wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: var(--tan);
+  color: var(--dark-text);
+  line-height: 1.6;
+}
+
+header {
+  background-color: var(--green);
+  color: var(--white);
+  padding: 2rem 1rem;
+  text-align: center;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+header h1 {
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+  letter-spacing: 1px;
+}
+/*nav head styling only below*/
+.nav-header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: rgba(111, 158, 117, 0.9);
+  backdrop-filter: blur(4px);
+  padding: 0.5rem 1rem;
+  z-index: 999;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.nav-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5rem 2rem;
+  max-width: 1300px;
+  margin: 0 auto;
+}
+
+.logo {
+  font-size: 2rem;
+  font-weight: bold;
+  color: var(--white);
+}
+
+.nav-right {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+.main-nav ul {
+  display: flex;
+  list-style: none;
+  gap: 2rem;
+  margin: 0;
+  padding: 0;
+}
+
+.main-nav a {
+  color: var(--white);
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1rem;
+}
+
+.menu-icon {
+  background: none;
+  border: none;
+  font-size: 1.8rem;
+  color: var(--white);
+  cursor: pointer;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.main-nav {
+  display: flex;
+  align-items: center;
+}
+
+
+
+
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  right: 1rem;
+  background-color: rgba(111, 158, 117, 0.95);
+  padding: 1rem;
+  list-style: none;
+  border-radius: 6px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+  width: 90vw;
+  max-width: 300px;
+  z-index: 1001;
+}
+
+.dropdown-menu li {
+  margin-bottom: 0.5rem;
+}
+
+.dropdown-menu a {
+  color: var(--white);
+  text-decoration: none;
+  font-size: 1rem;
+  display: block;
+}
+
+.dropdown-menu.show {
+  display: block;
+}
+
+/*Everything thats on the index page below*/
+
+main {
+  flex: 1;
+  padding: 2rem 1rem;
+  max-width: 1100px;
+  margin: 0 auto;
+  margin-top: 20px;
+}
+
+
+.welcome-section {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+.welcome-photo {
+  flex: 1;
+  height: 100%;
+  min-width: 300px;
+}
+
+.welcome-photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 12px;
+  display: block;
+}
+
+.welcome {
+  flex: 1;
+  background-color: var(--white);
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+  box-sizing: border-box;
+}
+
+.highlights-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+.highlight {
+  background-color: var(--light-green);
+  padding: 1rem;
+  border-radius: 6px;
+  text-align: center;
+}
+
+.zone-checker {
+  background-color: var(--white);
+  padding: 2rem 1rem;
+  border-radius: 8px;
+  margin-top: 2rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+  text-align: center;
+}
+
+.zone-text {
+  margin-bottom: 1rem;
+}
+
+.zone-image-link {
+  width: 100%;
+  overflow-x: hidden;
+  padding: 1rem 0;
+  text-align: center;
+}
+
+.zone-image-link img {
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+  display: block;
+  margin: 0 auto;
+  border-radius: 8px;
+}
+
+.call-to-action {
+  background-color: var(--light-green);
+  text-align: center;
+  padding: 2rem 1rem;
+  border-radius: 8px;
+  margin-top: 2rem;
+}
+
+.cta-button {
+  background-color: var(--green);
+  color: var(--white);
+  text-decoration: none;
+  padding: 0.75rem 1.5rem;
+  border-radius: 5px;
+  font-weight: bold;
+  display: inline-block;
+  margin-top: 1rem;
+}
+
+.cta-button:hover {
+  background-color: var(--link);
+}
+
+
+.feature-images {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem;
+  margin: 2rem 0;
+}
+
+.feature-images img {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 12px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.community-message {
+  margin-top: 2rem;
+  padding: 1.5rem;
+  background-color: var(--white);
+  border-radius: 12px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+  text-align: center;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.community-message h2 {
+  font-size: 1.8rem;
+  margin-bottom: 0.75rem;
+}
+
+.map-container {
+  margin: 2rem 0;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+/* MEDIA QUERIES */
+@media (max-width: 768px) {
+  .main-nav ul {
+    gap: 1rem;
+    font-size: 0.95rem;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+  }
+
+  .menu-icon {
+    display: block;
+  }
+
+  .feature-images {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (min-width: 768px) {
+  .welcome-section {
+    height: 500px;
+    flex-wrap: nowrap;
+    align-items: stretch;
+  }
+
+  .welcome {
+    height: 500px;
+    overflow-y: auto;
+  }
+
+  .highlights-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Contact page */
+.contact-section {
+  max-width: 600px;
+  margin: 3rem auto;
+  background: var(--white);
+  padding: 2rem;
+  border-radius: 16px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+  text-align: center;
+}
+
+.contact-section h1 {
+  color: var(--dark-text);
+}
+
+.contact-section .subhead {
+  color: var(--dark-text);
+  margin-bottom: 2rem;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
+.form-group {
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group label {
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+  color: var(--dark-text);
+}
+
+.contact-form input,
+.contact-form textarea {
+  padding: 0.75rem;
+  font-size: 1rem;
+  border: 1px solid var(--light-green);
+  border-radius: 8px;
+  background-color: var(--light-green);
+  color: var(--dark-text);
+  resize: vertical;
+}
+
+.contact-form button {
+  background-color: var(--green);
+  color: var(--white);
+  border: none;
+  padding: 0.9rem 1.5rem;
+  border-radius: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+  align-self: flex-start;
+  transition: background-color 0.3s ease;
+}
+
+.contact-form button:hover {
+  background-color: var(--link);
+}
+
+/* Map Section of contact page */
+.map-section {
+  max-width: 800px;
+  margin: 3rem auto;
+  padding: 0 1rem;
+  text-align: center;
+}
+
+.map-section h2 {
+  color: var(--dark-text);
+  margin-bottom: 1rem;
+}
+
+.map-container {
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+/* Contact page message and  hours*/
+
+.contact-hours-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: stretch; /*equal height */
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 3rem auto;
+  padding: 1rem;
+  box-sizing: border-box;
+}
+
+.contact-column,
+.hours-column {
+  flex: 1 1 48%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: var(--white);
+  padding: 2rem;
+  border-radius: 16px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+  box-sizing: border-box;
+  text-align: center; 
+}
+
+.contact-column h2,
+.hours-column h2,
+.contact-column p {
+  text-align: center;
+  margin: 0 0 1rem 0;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.contact-form input,
+.contact-form textarea {
+  padding: 0.75rem;
+  font-size: 1rem;
+  border: 1px solid var(--light-green);
+  border-radius: 6px;
+  background-color: var(--light-green);
+}
+
+.contact-form button {
+  background-color: var(--green);
+  color: var(--white);
+  border: none;
+  padding: 0.75rem 1.5rem;
+  border-radius: 6px;
+  font-weight: bold;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.hours-table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: var(--white);
+}
+
+.hours-table th,
+.hours-table td {
+  padding: 0.75rem;
+  text-align: left;
+  border-bottom: 1px solid var(--light-green);
+}
+
+.hours-table th {
+  background-color: var(--light-green);
+  font-weight: bold;
+}
+
+/* Responsive fallback */
+@media (max-width: 900px) {
+  .contact-hours-wrapper {
+    flex-direction: column;
+  }
+
+  .contact-column,
+  .hours-column {
+    width: 100%;
+  }
+}
+/*Contact me at the bottom of the page*/
+
+.contact-info {
+  max-width: 800px;
+  margin: 2rem auto;
+  padding: 2rem;
+  background-color: var(--white);
+  border-radius: 16px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.05);
+  text-align: center;
+}
+
+.contact-info h2 {
+  color: var(--dark-text);
+  margin-bottom: 1rem;
+}
+
+.contact-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+  margin-top: 1rem;
+}
+
+.contact-btn {
+  background-color: var(--green);
+  color: var(--white);
+  padding: 0.75rem 1.5rem;
+  text-decoration: none;
+  border-radius: 8px;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.contact-btn:hover {
+  background-color: var(--link);
+}
+
+@media (max-width: 768px) {
+  .contact-buttons {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .contact-btn {
+    width: 100%;
+    max-width: 300px;
+  }
+}
+
+/*event page info*/
+
+/* EVENTS PAGE STYLING */
+.events-page {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+}
+
+.events-intro,
+.events-followup,
+.missed-events {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.events-intro h1 {
+  font-size: 2.2rem;
+  margin-bottom: 0.5rem;
+}
+
+.events-intro h2,
+.events-followup h2,
+.missed-events h2 {
+  color: var(--green);
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+}
+
+.events-intro p,
+.events-followup p,
+.missed-events p {
+  max-width: 700px;
+  margin: 0 auto;
+  font-size: 1.1rem;
+}
+
+/* GRID SYSTEM */
+.events-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  margin-bottom: 3rem;
+}
+
+/* EVENT CARD */
+.event-card {
+  background-color: var(--white);
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.07);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  height: 100%;
+}
+
+.event-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.event-card h3 {
+  margin: 1rem;
+  font-size: 1.25rem;
+  color: var(--green);
+}
+
+.event-card p {
+  margin: 0 1rem 1rem;
+  font-size: 1rem;
+  color: var(--dark-text);
+  flex-grow: 1;
+}
+
+/* RESPONSIVENESS */
+@media (max-width: 768px) {
+  .events-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.events-intro h1 {
+  color: #216641; /* Dark green */
+  background-color: var(--white);
+  display: inline-block;
+  padding: 2rem 1rem;
+  border-radius: 6px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+  font-size: 2.2rem;
+  font-weight: bold;
+  margin-top: 3.5rem;
+  margin-bottom: 1rem;
+}
+
+footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: rgba(111, 158, 117, 0.8); /* 80% opacity */
+  color: var(--white);
+  display: flex;
+  flex-wrap: wrap; /* allow wrapping if needed */
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5rem 1rem;
+  font-size: 0.85rem;
+  box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
+  z-index: 998;
+  backdrop-filter: blur(2px);
+  box-sizing: border-box;
+}
+
+footer p {
+  margin: 0;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 70%; /* limits width so link has space */
+}
+
+footer a {
+  color: var(--white);
+  text-decoration: underline;
+  font-weight: bold;
+  cursor: pointer;
+  white-space: nowrap;
+  margin-left: auto;
+}
+
+footer a:hover {
+  color: var(--link);
+}
+
+
+/* === PLANT GUIDE HEADER TEXT STYLING === */
+#plant-guide .welcome-section {
+  text-align: center;
+  padding: 2rem 1rem 1rem;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+#plant-guide .welcome-section h1 {
+  font-size: 2.5rem;
+  color: #0f2218;
+  font-weight: 800;
+  margin-bottom: 0.5rem;
+}
+
+#plant-guide .welcome-section h2 {
+  font-size: 1.4rem;
+  color: var(--link);
+  margin-bottom: 0.75rem;
+}
+
+#plant-guide .welcome-section p {
+  font-size: 1rem;
+  color: var(--dark-text);
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+/* === PLANT GUIDE section=== */
+#plant-guide .welcome-section {
+  text-align: center;
+  padding: 2rem 1rem 1rem;
+  max-width: 700px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+#plant-guide .welcome-section h1 {
+  font-size: 2.8rem;
+  color: #0f2218;
+  font-weight: 800;
+  margin: 0;
+}
+
+#plant-guide .welcome-section h2 {
+  font-size: 1.5rem;
+  color: var(--green);
+  margin: 0;
+}
+
+#plant-guide .welcome-section p {
+  font-size: 1rem;
+  color: var(--dark-text);
+  max-width: 600px;
+  margin: 0;
+}
