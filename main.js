@@ -39,3 +39,46 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   });
 });
+
+
+//game script
+document.addEventListener("DOMContentLoaded", function () {
+  const draggables = document.querySelectorAll(".draggable");
+  const droppables = document.querySelectorAll(".droppable");
+  const result = document.getElementById("result");
+  let score = 0;
+
+  draggables.forEach((item) => {
+    item.addEventListener("dragstart", (e) => {
+      e.dataTransfer.setData("text/plain", e.target.id);
+    });
+  });
+
+  droppables.forEach((zone) => {
+    zone.addEventListener("dragover", (e) => {
+      e.preventDefault();
+      zone.style.background = "#dcead7"; // visual feedback
+    });
+
+    zone.addEventListener("dragleave", () => {
+      zone.style.background = "";
+    });
+
+    zone.addEventListener("drop", (e) => {
+      e.preventDefault();
+      zone.style.background = "";
+      const draggedId = e.dataTransfer.getData("text/plain");
+      const match = zone.getAttribute("data-match");
+
+      if (draggedId === match) {
+        const draggedText = document.getElementById(draggedId).textContent;
+        zone.textContent = `✅ Correct: ${draggedText}`;
+        score++;
+      } else {
+        zone.textContent = "❌ Wrong match";
+      }
+
+      result.textContent = `Score: ${score} / 10`;
+    });
+  });
+});

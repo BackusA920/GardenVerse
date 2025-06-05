@@ -628,8 +628,61 @@
 
 <!-- Crossbreeding --> 
 <section id="crossbreeding" class="page-section" style="display: none;">
-  <h1>Crossbreeding</h1>
-  <p>Explore fun ways to experiment with plant genetics in your own backyard.</p>
+  <section id="crossbreeding" class="page-section" style="display: none;">
+  <h1>CrossBreeding</h1>
+  <h2>Crossbreeding can be fun and help create exciting new plant varieties!</h2>
+
+  <div class="crossbreeding-intro" style="display: flex; flex-wrap: wrap; gap: 2rem; margin-top: 2rem;">
+    <div style="flex: 1; min-width: 300px;">
+      <p>
+        Crossbreeding is the process of intentionally mating two different plant varieties to produce a new hybrid that carries traits from both parents. This method is used to improve flavor, resistance to disease, yield, or appearance. It involves collecting pollen from one plant and applying it to the flower of another, often followed by isolation to avoid accidental pollination. Over generations, gardeners can stabilize new plant lines that combine the best characteristics of both.
+      </p>
+    </div>
+    <div style="flex: 1; min-width: 300px;">
+      <p>
+        While crossbreeding can be exciting, it’s important to know which plants should not be crossed. Some combinations may produce sterile offspring, undesirable traits, or weak growth. Crossbreeding plants from incompatible families rarely results in successful hybrids. Additionally, always ensure you're not violating any seed patent or proprietary plant laws when experimenting. A basic understanding of plant genetics, pollination timing, and species compatibility is essential.
+      </p>
+    </div>
+  </div>
+
+  <!-- GAME SECTION -->
+  <h2 style="margin-top: 3rem;">Drag the plant onto its correct crossbreeding match!</h2>
+  <div id="game-container" style="display: flex; justify-content: space-around; flex-wrap: wrap; margin-top: 2rem; gap: 2rem;">
+
+    <!-- Draggables -->
+    <div>
+      <h3>Plants</h3>
+      <div class="draggable" draggable="true" id="tomato">🍅 Tomato</div>
+      <div class="draggable" draggable="true" id="corn">🌽 Corn</div>
+      <div class="draggable" draggable="true" id="pepper">🌶 Pepper</div>
+      <div class="draggable" draggable="true" id="squash">🎃 Squash</div>
+      <div class="draggable" draggable="true" id="melon">🍈 Melon</div>
+      <div class="draggable" draggable="true" id="cucumber">🥒 Cucumber</div>
+      <div class="draggable" draggable="true" id="spinach">🥬 Spinach</div>
+      <div class="draggable" draggable="true" id="carrot">🥕 Carrot</div>
+      <div class="draggable" draggable="true" id="bean">🫘 Bean</div>
+      <div class="draggable" draggable="true" id="broccoli">🥦 Broccoli</div>
+    </div>
+
+    <!-- Drop Targets -->
+    <div>
+      <h3>Crossbreeding Pairs</h3>
+      <div class="droppable" data-match="tomato">Drop Here for Basil</div>
+      <div class="droppable" data-match="corn">Drop Here for Beans</div>
+      <div class="droppable" data-match="pepper">Drop Here for Eggplant</div>
+      <div class="droppable" data-match="squash">Drop Here for Zucchini</div>
+      <div class="droppable" data-match="melon">Drop Here for Cantaloupe</div>
+      <div class="droppable" data-match="cucumber">Drop Here for Dill</div>
+      <div class="droppable" data-match="spinach">Drop Here for Strawberry</div>
+      <div class="droppable" data-match="carrot">Drop Here for Onion</div>
+      <div class="droppable" data-match="bean">Drop Here for Marigold</div>
+      <div class="droppable" data-match="broccoli">Drop Here for Celery</div>
+    </div>
+  </div>
+
+  <p id="result" style="text-align:center; font-weight:bold; margin-top:2rem;"></p>
+</section>
+
 </section>
  
 <!-- Invasive --> 
@@ -645,7 +698,7 @@
 </section>
 
 
-</main>
+
 
 
 
