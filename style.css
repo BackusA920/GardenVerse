@@ -684,7 +684,7 @@ footer a:hover {
 
 .welcome-section-plant {
   background-color: #ffffff;
-  padding: 1rem 1rem; /
+  padding: 1rem 1rem;
   border-radius: 20px;
   text-align: center;
   margin: 1rem auto 1.5rem auto;
@@ -763,23 +763,6 @@ footer a:hover {
 
 /* Soil Page Styling */
 
-/* Root color variables */
-:root {
-  --green: #0f2218;
-  --light-green: #dcead7;
-  --tan: #f3f0e8;
-  --white: #ffffff;
-}
-
-/* Base styling */
-#soil-and-sunlight {
-  padding: 2rem;
-  background-color: var(--tan);
-  color: #2b2b2b;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-}
-
-/* Headings */
 #soil-and-sunlight h1 {
   font-size: 2.8rem;
   text-align: center;
@@ -796,24 +779,36 @@ footer a:hover {
 /* Intro container with image and text */
 .intro-container {
   display: flex;
-  flex-wrap: wrap;
+  flex-direction: row; /* side by side */
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
   background-color: var(--white);
   border-radius: 20px;
   box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
+  padding: 2rem;
   margin: 0 auto 3rem auto;
   max-width: 1100px;
-  overflow: hidden;
+  flex-wrap: wrap;
 }
 
-.intro-text,
+.intro-text {
+  flex: 1;
+  order: 1;
+  text-align: left;
+}
+
 .intro-image {
-  flex: 1 1 500px;
-  padding: 1.5rem;
+  flex: 1;
+  order: 2;
+  display: flex;
+  justify-content: flex-end;
 }
 
-.intro-text p {
-  margin: 0;
-  line-height: 1.7;
+.intro-image img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
 }
 
 /* Deficiency image grid */
@@ -831,6 +826,9 @@ footer a:hover {
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
   padding: 1rem;
   text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .deficiency-card img {
@@ -883,4 +881,108 @@ footer a:hover {
   font-size: 1rem;
   line-height: 1.7;
   margin-bottom: 1rem;
+}
+
+/* companion planting grid */
+
+.companion-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2.5rem;
+  margin: 3rem auto;
+  max-width: 1200px;
+  padding: 0 1.5rem;
+}
+
+/* Individual Cards */
+.companion-card {
+  background-color: var(--white);
+  border-radius: 20px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  padding: 1rem;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+}
+
+.companion-card:hover {
+  transform: scale(1.02);
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.1);
+}
+
+/* Image Styling */
+.companion-card img {
+  width: 100%;
+  height: 180px;
+  border-radius: 15px;
+  margin-bottom: 1rem;
+  object-fit: cover;
+}
+
+/* Title & Text */
+
+.companion-card h3 {
+  font-size: 2.25rem;
+  color: var(--green);
+  margin: 0.5rem 0;
+  
+}
+
+#companion-planting {
+  text-align: center;
+
+}
+
+#companion-planting h1 {
+  font-size: 2.8rem; /* Bigger title */
+  color: var(--dark-text);
+  margin-bottom: 1rem;
+}
+.companion-card p {
+  font-size: 0.95rem;
+  color: var(--dark-text);
+  margin: 0.5rem 0;
+}
+
+/* Hidden Details */
+.card-details {
+  display: none;
+  margin-top: 0.75rem;
+  padding-top: 0.5rem;
+  border-top: 1px solid var(--light-green);
+  font-size: 0.95rem;
+  color: var(--dark-text);
+  text-align: left;
+}
+
+/* Show on click */
+.companion-card.active .card-details {
+  display: block;
+}
+
+.reveal-btn {
+  margin-top: auto;
+  background-color: #357754; /* your dark green */
+  color: var(--white);
+  padding: 0.6rem 1.2rem;
+  border: none;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  width: 100%;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.reveal-btn:hover {
+  background-color: #143825; /* slightly lighter green for hover */
+}
+
+.card-details p {
+  text-align: center;
+  margin-top: 0.75rem;
 }

@@ -28,3 +28,14 @@ document.addEventListener("DOMContentLoaded", function () {
   // Default to showing "index" on load
   showSection("index");
 });
+
+document.addEventListener("DOMContentLoaded", function () {
+  const buttons = document.querySelectorAll(".reveal-btn");
+
+  buttons.forEach((button) => {
+    button.addEventListener("click", function () {
+      const card = button.closest(".companion-card");
+      card.classList.toggle("active");
+    });
+  });
+});
